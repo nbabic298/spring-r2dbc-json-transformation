@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: r2dbc-json-transformation
+  r2dbc:
+    url: r2dbc:pool:postgresql://localhost:5432/test
+    username: test
+    password: test
+
+postgres:
+  datasource:
+    prefix: r2dbc:pool:postgresql://
+    host: localhost
+    port: 5432
+    database: test
+    username: test
+    password: test

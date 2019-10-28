@@ -1,0 +1,8 @@
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+    io:
+      codifica: TRACE
