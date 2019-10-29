@@ -15,7 +15,7 @@ import java.util.Map;
 @Slf4j
 @ReadingConverter
 @AllArgsConstructor
-public class StringToMapConverter implements Converter<Json, Map<String, Object>> {
+public class JsonToMapConverter implements Converter<Json, Map<String, Object>> {
 
     private final ObjectMapper objectMapper;
 

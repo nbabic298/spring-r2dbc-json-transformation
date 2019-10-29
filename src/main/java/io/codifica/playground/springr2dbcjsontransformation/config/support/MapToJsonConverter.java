@@ -13,7 +13,7 @@ import java.util.Map;
 @Slf4j
 @WritingConverter
 @AllArgsConstructor
-public class MapToStringConverter implements Converter<Map<String, Object>, Json> {
+public class MapToJsonConverter implements Converter<Map<String, Object>, Json> {
 
     private final ObjectMapper objectMapper;
 

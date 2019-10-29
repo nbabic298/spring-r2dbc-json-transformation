@@ -2,8 +2,8 @@ package io.codifica.playground.springr2dbcjsontransformation.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.codifica.playground.springr2dbcjsontransformation.config.support.DatasourceProps;
-import io.codifica.playground.springr2dbcjsontransformation.config.support.MapToStringConverter;
-import io.codifica.playground.springr2dbcjsontransformation.config.support.StringToMapConverter;
+import io.codifica.playground.springr2dbcjsontransformation.config.support.MapToJsonConverter;
+import io.codifica.playground.springr2dbcjsontransformation.config.support.JsonToMapConverter;
 import io.r2dbc.spi.ConnectionFactories;
 import io.r2dbc.spi.ConnectionFactory;
 import lombok.AllArgsConstructor;
@@ -41,8 +41,8 @@ public class ReactivePostgresConfig extends AbstractR2dbcConfiguration {
     @Override
     public R2dbcCustomConversions r2dbcCustomConversions() {
         List<Converter<?, ?>> converters = new ArrayList<>();
-        converters.add(new StringToMapConverter(objectMapper));
-        converters.add(new MapToStringConverter(objectMapper));
+        converters.add(new JsonToMapConverter(objectMapper));
+        converters.add(new MapToJsonConverter(objectMapper));
         return new R2dbcCustomConversions(getStoreConversions(), converters);
     }
 
